@@ -1,0 +1,77 @@
+.block {
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.block .container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.block .container img {
+  width: 100%;
+  height: 100%;
+}
+
+.block .container .from,
+.block .container .to {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+/* 上下翻页 */
+.block .container1 .from {
+  transform: translateY(-100%);
+}
+
+.block .container1:hover .from {
+  transform: translateY(0);
+}
+
+.block .container1:hover .to {
+  transform: translateY(100%);
+}
+
+/* 左右翻页 */
+.block .container2 .from {
+  transform: translateX(-100%);
+}
+
+.block .container2:hover .from {
+  transform: translateX(0);
+}
+
+.block .container2:hover .to {
+  transform: translateX(100%);
+}
+
+
+
+/* 中心翻页 */
+.block .container3 .to,
+.block .container3 .from {
+  /* 设置背面不显示 */
+  backface-visibility: hidden;
+  transition-duration: 2s;
+}
+
+.block .container3 .from {
+  transform: rotateY(-180deg);
+}
+
+.block .container3:hover .from {
+  transform: rotateY(0);
+}
+
+.block .container3:hover .to {
+  transform: rotateY(180deg);
+}
