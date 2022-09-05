@@ -1,0 +1,91 @@
+.avatar-container {
+  position: relative;
+  margin-left: 100px;
+}
+
+.mini-avatar--small {
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.inside-avatar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.avatar img,
+.inside-avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 飞入飞出动画 */
+.animate-flyto {
+  animation: flyTo 1s both;
+}
+
+.animate-flyout {
+  animation: flyOut 1s both;
+}
+
+
+.animate-fadeOut {
+  animation: fadeOut 2s both;
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes flyTo {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+
+  100% {
+    top: 10px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes flyOut {
+  0% {
+    top: 10px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
